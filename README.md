@@ -194,13 +194,15 @@ Now we can see how the "directories" are structured:
 
 First of all you must configure aws./credentials.cfg:
 
+```
+
 [AWS]
 AWS_ACCESS_KEY_ID=''
 AWS_SECRET_ACCESS_KEY=''
 
 [S3]
 INPUT=..
-OUTPUT=..```
+OUTPUT=..
 
 ```
 
