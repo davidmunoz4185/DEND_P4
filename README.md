@@ -7,6 +7,21 @@ In this section we add description about the different files used:
 * P4.ipynb: Jupyter Notebook with exactly the same content than etl.py in order to check performance in each task
 * etl.py: Main python program with all the logic to load parquet files
 
+This project is based in adquiring Data Lake's knowledge by S3 Resources and by the use of an "ELT" strategy in order to obtain
+the final target: Parquet Files divided by informational scope. 
+
+These are the steps followed:
+
+1. Create Spark Session
+2. Create Songs & Artists Tables from one S3 Resource
+3. Create Parquet Files from previous Tables
+4. Create Log Data Table from second S3 Resource (events log).
+5. By previous info create the rest of "dimension" & "fact" tables.
+6. Once all the tables are loaded, create parquet files partition by requirements.
+
+In addition, I have to admit that due I am more confident with Spark SQL module, I have choosen this one in order to get the final
+result more easily instead by DataFrame API.
+
 ### DIAGRAM ...
 
 Now we can see how the "directories" are structured:
